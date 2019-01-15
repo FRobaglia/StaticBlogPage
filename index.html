@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tout sur le front-end</title>
+    <meta name="description" content="Le blog numero 1 du front-end" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li> <a href="#"> Accueil </a> </li>
+          <li> <a href="#"> <mark> Le HTML </mark> </a>
+          </li>
+          <li> <a href="#"> Le CSS </a>  </li>
+          <li> <a href="#"> Le Javascript </a> </li>
+          <li> <a href="#"> Liens utiles </a> </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1> <mark> HTML </mark> </h1>
+      <section class="article">
+        <a href="#"> Retour à la liste des articles </a>
+        <h2>La balise du jour : <code>&lt;details> </code></h2>
+        <article>
+          <h3><mark>Description</mark></h3>
+
+          <p>
+            L'élément HTML <code>&lt;details&gt;</code> est utilisé comme un
+            outil permettant de révéler une information. Un résumé ou un
+            intitulé peuvent être fournis grâce à un élément
+            <code>&lt;summary></code>.
+          </p>
+
+          <p>
+            La plupart du temps, le contrôle utilisé pour cet élément est un
+            triangle qui est tourné ou tordu afin d'indiquer si l'élément est
+            révélé ou non. Si le premier élément fils de l'élément
+            <code>&lt;details&gt;</code> est un élément
+            <code>&lt;summary&gt;</code>, c'est le contenu de ce dernier qui est
+            utilisé comme intitulé pour le contenu à révéler (l'intitulé est
+            donc toujours visible).
+          </p>
+
+          <h3> <mark> Attributs </mark> </h3>
+
+          <p>
+            <code>open</code> : Cet attribut booléen indique si les détails
+            seront affichés lors du chargement de la page. La valeur par défaut
+            est <code>false</code> (les détails sont alors cachés).
+          </p>
+
+          <h3> <mark> L'évènement <code>toggle </code> </mark> </h3>
+
+          <p>
+            En plus des évènements classiques pris en charge par les éléments
+            HTML, l'élément <code>&lt;details&gt;</code> prend en charge
+            l'évènement <code>toggle</code> qui est envoyé sur l'élément lorsque
+            son état change entre ouvert et fermé (que ce soit dans un sens ou
+            dans l'autre). L'évènement est envoyé après que l'état ait été
+            changé et si plusieurs changement d'état ont eu lieu avant que le
+            navigateur envoie l'évènement, le navigateur fusionnera ces
+            évènements en un seul.
+          </p>
+
+          <h3> <mark> Rien de mieux qu'un exemple pour illustrer la chose </mark> </h3>
+
+          <p>
+            Cliquez sur l'exemple ci-dessous pour voir le contenu de la balise
+            <code>&lt;details></code> .
+          </p>
+
+          <details>
+            <summary>Informations sur cet article</summary>
+            <p>
+              Cet article a été écrit par
+              <a href="http://felixrobaglia.netlify.com" rel="author"> Félix Robaglia </a>
+              , étudiant en première année à HETIC, dans le cadre d'un cours
+              sur l'accessibilité Web.
+            </p>
+          </details>
+          <aside>
+            <a href="#">Lire aussi | La balise <code>&lt;aside></code> </a>
+          </aside>
+        </article>
+      </section>
+      <section class="comments">
+        <h2>Commentaires</h2>
+        <form>
+          <label for="comment">Ecrire un commentaire sur cet article :</label>
+          <textarea
+            id="comment"
+            name="comment"
+            rows="5"
+            placeholder="Votre commentaire ici...">
+          </textarea>
+          <input type="submit" value="Envoyer le commentaire">
+        </form>
+
+        <figure itemscope itemtype="https://schema.org/Comment">
+          <img src="images/Jean.webp" itemprop="image" alt="Photo de Jean">
+          <figcaption>
+            <p class="name" itemprop="name">Jean</p>
+            <time
+              datetime="2019-01-14 14:46"
+              class="date"
+              itemprop="dateCreated"> Le 14 janvier 2019, 14:46 </time>
+
+            <p class="comment" itemprop="text">
+              Article très intéressant ! Grâce à &lt;details>, on améliore la
+              sémantique de notre site, et on permet à l'utilisateur d'avoir une
+              expérience plus agréable !
+            </p>
+
+          </figcaption>
+        </figure>
+
+        <figure itemscope itemtype="https://schema.org/Comment">
+          <img
+            src="images/Coralie.webp"
+            itemprop="image"
+            alt="Photo de Coralie"
+          />
+          <figcaption>
+            <p class="name" itemprop="name">Coralie</p>
+            <time
+              datetime="2019-01-10 19:15"
+              class="date"
+              itemprop="dateCreated"
+              >Le 10 janvier 2019, 19:15 </time>
+
+            <p class="comment" itemprop="text">
+              C'est super ! Mais comment on fait si on veut changer l'icone de
+              la flèche du &lt;summary> ? Elle ne colle pas au design de mon
+              site :(
+            </p>
+
+          </figcaption>
+        </figure>
+
+        <figure itemscope itemtype="https://schema.org/Comment">
+          <img
+            src="images/Donald.webp"
+            itemprop="image"
+            alt="Photo de Donald"
+          />
+          <figcaption>
+            <p class="name" itemprop="name">Donald</p>
+            <time
+              datetime="2019-12-19 12:13"
+              class="date"
+              itemprop="dateCreated"
+              >Le 19 décembre 2018, 12:13 </time>
+
+            <p class="comment" itemprop="text">
+              Je préfère les balise div et span, ce sont les meilleurs balises à
+              mon goût.
+            </p>
+
+          </figcaption>
+        </figure>
+
+      </section>
+    </main>
+    <footer> <p> Copyright © Félix Robaglia - 2019 </p> </footer>
+  </body>
+</html>

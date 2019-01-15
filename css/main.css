@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro/SourceSansPro-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/PT_Sans/PT_Sans-Web-Bold.ttf) format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+section > a {
+  font-style: italic;
+  color: lightgrey;
+  font-size: 14px;
+}
+body {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  background: #222222;
+  margin: 0;
+  color: whitesmoke;
+}
+ul {
+  padding: 0;
+  font-size: 12px;
+  height: 35px;
+  line-height: 20px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+nav {
+  box-shadow: 0px 3px 7px black;
+  border-top: solid 4px rgb(255, 255, 102);
+}
+h2 {
+  margin: 20px 0;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+}
+h3 {
+  font-family: "PT Sans";
+  font-size: 32px;
+}
+mark {
+  padding: 3px;
+  background: rgb(255, 255, 102);
+  border-radius: 3px;
+}
+article p {
+  padding: 15px;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+.yellow-bar {
+  background-color: yellow;
+  height: 5px;
+}
+.article {
+  margin-bottom: 50px;
+}
+summary {
+  cursor: pointer;
+}
+a:hover {
+  background-color: rgb(255, 255, 102);
+  color: black;
+  border-radius: 3px;
+}
+details {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  background-color: rgb(255, 255, 102);
+  border-radius: 5px;
+  margin: 30px auto;
+}
+details a {
+  color: black;
+  text-decoration: underline;
+}
+textarea {
+  width: 100%;
+}
+figcaption {
+  display: inline-block;
+}
+figure {
+  margin: 30px;
+}
+figure img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+figcaption {
+  margin-left: 30px;
+  display: inline;
+}
+.name {
+  font-weight: bold;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+.date {
+  margin-bottom: 20px;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  color: lightgrey;
+  font-size: 14px;
+}
+.comments {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+input {
+  margin: 10px;
+  float: right;
+}
+footer {
+  color: black;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgb(255, 255, 102);
+}
+
+details, details p {
+  font-size: 20px;
+}
+@media (min-width: 800px) {
+  ul {
+    font-size: 16px;
+  }
+  main {
+    max-width: 800px;
+    margin-left: 140px;
+    margin-top: 50px;
+  }
+  details {
+    width: 500px;
+  }
+}
